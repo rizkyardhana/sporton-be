@@ -1,9 +1,9 @@
 {
-  "name": "sporton-session-6",
+  "name": "sporton-be",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
+"scripts": {
     "start": "node dist/service.js",
     "dev": "nodemon scr/service.ts",
     "build": "tsc",
@@ -12,7 +12,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.28.1",
+  "packageManager": "pnpm@10.18.2",
   "dependencies": {
     "bcrypt": "^6.0.0",
     "cors": "^2.8.6",

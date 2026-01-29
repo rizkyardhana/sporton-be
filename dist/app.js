@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const auth_routes_1 = __importDefault(require("./roules/auth.routes"));
+const auth_middlwares_1 = require("./middlewares/auth.middlwares");
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)());
 app.use(express_1.default.json());
@@ -13,6 +14,7 @@ app.use("/api/auth", auth_routes_1.default);
 app.get("/", (req, res) => {
     res.send("Sporton Backend API is Running");
 });
-// Auth Routes
-app.use("/api/auth", auth_routes_1.default);
+app.get("/test-middleware", auth_middlwares_1.authenticate, (req, res) => {
+    res.send("Hore, kamu bisa mengaksesnya karena kamu pakai token!");
+});
 exports.default = app;
